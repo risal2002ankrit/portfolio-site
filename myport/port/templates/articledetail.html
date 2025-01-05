@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block articledetail %}
+<h2>{{article.title}}</h2>
+<img src="{{article.cover_image.url}}" alt="">
+<p>{{article.content}}</p>
+    {% endblock %}

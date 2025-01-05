@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block blogs %}
+
+<section id="blog" class="blog">  
+    <div class="container">
+        <div class ="section-title">
+            <h2> Blogs </h2>
+            <p> My Blogs </p>
+        </div>
+        <div class="row">
+            {% for blog in blogs %}
+            <div class="col-sm-6 mb-3">
+                <div class="card" style="width: 18rem">
+                    <img src="{{blog.cover_image.url}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="blog-title">{{blog.title}}</h5>
+                            <a href="{{blog.id}}" class="btn btn-primary">Read more</a>
+                        </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

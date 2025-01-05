@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block articlelistpage %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">A</div>
+        <div class="col-md-8">
+            {% for article in articles %}
+            <div class="d-flex justify-content-start p-2">
+                <img src="{{article.cover_image.url}}" class="img-fluid" alt="...">
+                <h1 class="display-6">
+                    <li><a href="/article/detail/{{article.id}}/">{{article.title}} </a></li>
+                </h1>
+            </div>
+            {% endfor %}
+
+        </div>
+        <div class="col-md-2">C</div>
+
+    </div>
+</div>
+{% endblock %}
