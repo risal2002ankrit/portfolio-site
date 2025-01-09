@@ -13,8 +13,10 @@ class Yourself(models.Model):
     twitter=models.CharField(max_length=300,default='default_facebook_value')
     linkedin=models.CharField(max_length=300,default='default_facebook_value')
     github=models.CharField(max_length=300,default='default_facebook_value')
-
-
+    # my_image = models.FileField(upload_to='images/')
+    def __str__(self):
+        return self.name
+    
 class category (models.Model):
     name= models.CharField(max_length=255)
 

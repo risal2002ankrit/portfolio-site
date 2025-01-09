@@ -31,10 +31,10 @@ def about(request):
     address = [context.address for context in contexts]
     degree = [context.degree for context in contexts]
     aboutyou=[context.about_you for context in contexts]
-    context ={'address': address, 
-              'email': email, 
+    context ={'address': address[0], 
+              'email': email[0], 
               'phone': phone[0],
-              'degree':degree,
+              'degree':degree[0],
               'aboutyou':aboutyou[0]}
     return render(request,'about.html',context)
     
@@ -60,9 +60,9 @@ def get_contact(request):
     phone = [context.phone for context in contexts]
     address = [context.address for context in contexts]
     linkden = [context.linkedin for context in contexts]
-    context ={'address': address, 
-              'email': email,
-              'phone': phone}
+    context ={'address': address[0], 
+              'email': email[0],
+              'phone': phone[0]}
     return render(request,'contact.html',context)
 
 def get_resume(request):
